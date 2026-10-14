@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tools Quick Links Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dark-mode">
+  <div class="dashboard-container">
+    
+    <!-- Top Bar -->
+    <header class="top-bar">
+      <div class="user-name-container">
+        <label for="username-input">Nama Anda:</label>
+        <input type="text" id="username-input" placeholder="Masukkan nama..." />
+      </div>
+      
+      <div class="top-controls">
+        <button id="theme-toggle-btn" class="btn-secondary">☀️ Light Mode</button>
+      </div>
+    </header>
+
+    <!-- Greeting Section -->
+    <section class="greeting-section">
+      <h1 id="greeting-text">Selamat Pagi!</h1>
+      <p id="clock-text">00.00.00</p>
+      <p id="date-text">Senin, 1 Januari 2026</p>
+    </section>
+
+    <!-- Main Grid Layout (2 Card Tools) -->
+    <main class="dashboard-grid-2">
+      
+      <!-- Card 1: AI Tools -->
+      <section class="card">
+        <h2>🤖 Quick Links (AI Tools)</h2>
+        <form id="add-ai-form">
+          <input type="text" id="ai-title-input" placeholder="Nama AI Tool (misal: ChatGPT)" required>
+          <input type="url" id="ai-url-input" placeholder="URL (https://...)" required>
+          <button type="submit" class="btn-orange">Tambah Link</button>
+        </form>
+        <ul id="ai-links-list" class="links-list"></ul>
+      </section>
+
+      <!-- Card 2: DigitalTech Tools -->
+      <section class="card">
+        <h2>💻 Quick Links (DigitalTech Tools)</h2>
+        <form id="add-tech-form">
+          <input type="text" id="tech-title-input" placeholder="Nama Tech Tool (misal: GitHub)" required>
+          <input type="url" id="tech-url-input" placeholder="URL (https://...)" required>
+          <button type="submit" class="btn-yellow">Tambah Link</button>
+        </form>
+        <ul id="tech-links-list" class="links-list"></ul>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

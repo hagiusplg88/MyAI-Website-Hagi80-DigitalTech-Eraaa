@@ -1,0 +1,152 @@
+:root {
+  --bg-color: #f4f7f6;
+  --card-bg: #ffffff;
+  --text-color: #111111;
+  --border-color: #ff3333; /* Pinggiran merah */
+  --shadow: 0 4px 6px rgba(0,0,0,0.08);
+}
+
+body.dark-mode {
+  --bg-color: #121212;
+  --card-bg: #1e1e1e;
+  --text-color: #ffffff;
+  --border-color: #ff3333; /* Pinggiran merah untuk dark mode */
+  --shadow: 0 4px 6px rgba(0,0,0,0.4);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 20px;
+  min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dashboard-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.user-name-container input {
+  padding: 8px 12px;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}
+
+.greeting-section {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.greeting-section h1 {
+  font-size: 2.4rem;
+  margin-bottom: 5px;
+}
+
+#clock-text {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ff9800;
+}
+
+#date-text {
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+
+.dashboard-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+}
+
+/* Card dengan pinggiran (border) merah */
+.card {
+  background-color: var(--card-bg);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  padding: 22px;
+  box-shadow: var(--shadow);
+}
+
+.card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #333;
+  padding-bottom: 8px;
+}
+
+/* Forms & Inputs */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="text"], input[type="url"] {
+  padding: 10px;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}
+
+/* Tombol */
+button {
+  cursor: pointer;
+  padding: 9px 14px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: opacity 0.2s;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+.btn-orange { background-color: #ff9800; color: #111; }
+.btn-yellow { background-color: #ffeb3b; color: #111; }
+.btn-red { background-color: #f44336; color: #fff; }
+.btn-secondary { background-color: #333; color: #fff; border: 1px solid #555; }
+body:not(.dark-mode) .btn-secondary { background-color: #e0e0e0; color: #111; }
+
+/* Links List */
+ul { list-style: none; }
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #333;
+}
+
+li a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+li a:hover {
+  text-decoration: underline;
+  color: #ff9800;
+}
